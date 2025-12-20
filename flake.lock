@@ -128,8 +128,8 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1766232485,
-        "narHash": "sha256-HYNwl9tcke+Yf9M/JEA3Y2EFSWakn6K8spAAKK4h8gk=",
+        "lastModified": 1766254669,
+        "narHash": "sha256-sfwzmb62mScBOgULYr6qkXxfli3SLmtI9WhynbKUdaI=",
         "path": "/home/ali/Secrets/secret.nix",
         "type": "path"
       },
