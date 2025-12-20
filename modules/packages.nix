@@ -22,6 +22,10 @@
       git.enable = true;
     };
 
+    # --- Hyprland Ecosystem ---
+    wayland.windowManager.hyprland.enable = true;
+    programs.hyprshot.enable = true;
+
     # wayland.windowManager.sway.enable = true;
   };
 }

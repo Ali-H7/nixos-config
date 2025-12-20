@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # Configure XDG user directories, which define standard locations for user files (e.g., Desktop, Documents).

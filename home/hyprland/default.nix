@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
-    enable = true;
     package = null;
     portalPackage = null;
 
@@ -99,6 +98,10 @@
         "$mainMod, J, togglesplit,"
         "$mainMod, F, fullscreen,"
 
+        # Screenshot
+        "$mainMod, S, exec, hyprshot -m output -o ~/Pictures/Screenshots"
+        "$mainMod SHIFT, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
+        "$mainMod CONTROL, S, exec, hyprshot -m window -o ~/Pictures/Screenshots"
         # DMS Application Launchers
         "$mainMod, A, exec, dms ipc call spotlight toggle"
         "$mainMod, V, exec, dms ipc call clipboard toggle"
@@ -142,8 +145,8 @@
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         # Special Workspace
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        #"$mainMod, S, togglespecialworkspace, magic"
+        #"$mainMod SHIFT, S, movetoworkspace, special:magic"
       ];
 
       bindm = [
