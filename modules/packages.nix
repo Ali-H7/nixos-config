@@ -22,6 +22,10 @@
       git.enable = true;
     };
 
+    # --- Music Player ---
+    services.mpd.enable = true;
+    programs.rmpc.enable = true;
+
     # --- Hyprland Ecosystem ---
     wayland.windowManager.hyprland.enable = true;
     programs.hyprshot.enable = true;

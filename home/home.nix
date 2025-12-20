@@ -18,6 +18,7 @@
     ./hyprcursor
     ./hyprland
     ./kitty
+    ./mpd
     ./qt
     ./vscode
     ./xdg
