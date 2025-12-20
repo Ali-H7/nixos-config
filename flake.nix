@@ -9,18 +9,29 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix.url = "github:ryantm/agenix";
+
+    secrets = {
+      url = "path:/home/ali/Secrets/secret.nix";
+      flake = false;
+    };
   };
 
   outputs =
     inputs@{
       nixpkgs,
       home-manager,
+      agenix,
+      secrets,
       ...
     }:
     {
       nixosConfigurations = {
         blankspace = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             ./hardware.nix
             ./system.nix
@@ -30,6 +41,7 @@
             ./modules/mounts.nix
             ./modules/nvidia.nix
             ./modules/packages.nix
+            agenix.nixosModules.default
           ];
         };
       };

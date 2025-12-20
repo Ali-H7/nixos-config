@@ -6,6 +6,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    agenix-cli
     discord
     nautilus
     neovim

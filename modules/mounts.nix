@@ -1,8 +1,11 @@
 {
   pkgs,
+  inputs,
   ...
 }:
-
+let
+  secret = import inputs.secrets;
+in
 {
   # Enable NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
