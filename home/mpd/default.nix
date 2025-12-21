@@ -41,9 +41,9 @@ in
         directories_sort: SortFormat(group_by_type: true, reverse: false),
         album_art: (
             method: Auto,
-            max_size_px: (width: 1200, height: 1200),
+            max_size_px: (width: 0, height: 0),
             disabled_protocols: ["http://", "https://"],
-            vertical_align: Center,
+            vertical_align: Top,
             horizontal_align: Center,
         ),
         keybinds: (
@@ -156,10 +156,6 @@ in
                                 direction: Vertical,
                                 panes: [
                                     (
-                                        size: "3",
-                                        pane: Pane(Lyrics)
-                                    ),
-                                    (
                                         size: "100%",
                                         pane: Pane(AlbumArt)
                                     ),
@@ -167,7 +163,7 @@ in
                             ),
                         ), 
                         (
-                            size: "60%",
+                            size: "66%",
                             pane: Pane(Queue)
                         ),
                     ],
@@ -176,10 +172,6 @@ in
             (
                 name: "Directories",
                 pane: Pane(Directories),
-            ),
-            (
-                name: "Artists",
-                pane: Pane(Artists),
             ),
             (
                 name: "Album Artists",

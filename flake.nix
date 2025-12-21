@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix.url = "github:ryantm/agenix";
-
     secrets = {
       url = "path:/home/ali/Secrets/secret.nix";
       flake = false;
@@ -21,7 +19,6 @@
     inputs@{
       nixpkgs,
       home-manager,
-      agenix,
       secrets,
       ...
     }:
@@ -41,7 +38,6 @@
             ./modules/mounts.nix
             ./modules/nvidia.nix
             ./modules/packages.nix
-            agenix.nixosModules.default
           ];
         };
       };

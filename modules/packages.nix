@@ -6,12 +6,12 @@
   };
 
   environment.systemPackages = with pkgs; [
-    agenix-cli
     discord
     nautilus
     neovim
-    osu-lazer
+    osu-lazer-bin
     papirus-icon-theme
+    gnome-boxes # > Virtualization
   ];
 
   home-manager.users.ali = {
@@ -32,4 +32,8 @@
 
     # wayland.windowManager.sway.enable = true;
   };
+
+  # --- Virtualization ---
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 }
