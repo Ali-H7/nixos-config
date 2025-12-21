@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+let
+  secret = import inputs.secrets;
+in
 {
   programs = {
     dms-shell.enable = true; # /modules/nix
@@ -25,6 +28,16 @@
     # --- Music Player ---
     services.mpd.enable = true;
     programs.rmpc.enable = true;
+    services.mpd-mpris.enable = true;
+    services.mpdscribble = {
+      enable = true;
+      endpoints = {
+        "last.fm" = {
+          passwordFile = "/home/ali/Secrets/last-fm.txt";
+          username = secret.lastFmUserName;
+        };
+      };
+    };
 
     # --- Hyprland Ecosystem ---
     wayland.windowManager.hyprland.enable = true;
