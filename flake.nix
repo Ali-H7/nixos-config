@@ -38,6 +38,7 @@
             ./modules/mounts.nix
             ./modules/nvidia.nix
             ./modules/packages.nix
+            ./modules/wireguard.nix
           ];
         };
       };
