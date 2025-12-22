@@ -20,6 +20,7 @@ in
   home-manager.users.ali = {
     programs = {
       firefox.enable = true;
+      librewolf.enable = true;
       kitty.enable = true;
       vscode.enable = true;
       git.enable = true;
@@ -42,6 +43,9 @@ in
     # --- Hyprland Ecosystem ---
     wayland.windowManager.hyprland.enable = true;
     programs.hyprshot.enable = true;
+
+    #MPV
+    programs.mpv.enable = true;
 
     # wayland.windowManager.sway.enable = true;
   };

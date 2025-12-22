@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
     secrets = {
       url = "path:/home/ali/Secrets/secret.nix";
       flake = false;
@@ -19,6 +21,7 @@
     inputs@{
       nixpkgs,
       home-manager,
+      nix-flatpak,
       secrets,
       ...
     }:
@@ -33,6 +36,7 @@
             ./hardware.nix
             ./system.nix
             ./modules/dms.nix
+            ./modules/flatpak.nix
             ./modules/fonts.nix
             ./modules/home-manager.nix
             ./modules/mounts.nix
