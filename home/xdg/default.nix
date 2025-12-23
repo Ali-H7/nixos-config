@@ -7,4 +7,5 @@
     # Automatically create the user directories if they do not exist.
     createDirectories = true;
   };
+
 }

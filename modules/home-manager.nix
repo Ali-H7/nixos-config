@@ -14,6 +14,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
+    backupFileExtension = "backup";
     # TODO replace ryan with your own username
 
     users.ali = import ../home/home.nix;

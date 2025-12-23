@@ -15,6 +15,7 @@ in
     osu-lazer-bin
     papirus-icon-theme
     gnome-boxes # > Virtualization
+    ffmpegthumbnailer # Video thumbnails for file managers
   ];
 
   home-manager.users.ali = {
