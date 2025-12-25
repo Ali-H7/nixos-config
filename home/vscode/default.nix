@@ -14,6 +14,7 @@
     profiles.default.extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide # Nix IDE
       asvetliakov.vscode-neovim # VSCode Neovim
+      a5huynh.vscode-ron # (RON) syntax
     ];
   };
 }
