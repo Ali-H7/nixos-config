@@ -43,7 +43,8 @@
 
       # --- Input ---
       input = {
-        kb_layout = "us";
+        kb_layout = "us, ara";
+        kb_options = "grp:alt_shift_toggle"; # Toggle layouts with Left Alt + Shift
         follow_mouse = 1;
         sensitivity = 0;
         accel_profile = "flat";
