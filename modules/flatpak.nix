@@ -6,6 +6,7 @@
     enable = true;
     packages = [
       "org.jdownloader.JDownloader"
+      "com.bitwarden.desktop"
     ];
 
     update.onActivation = true;
