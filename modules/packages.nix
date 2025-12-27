@@ -14,6 +14,7 @@ in
     neovim
     osu-lazer-bin
     papirus-icon-theme
+    simp1e-cursors
     gnome-boxes # > Virtualization
     ffmpegthumbnailer # Video thumbnails for file managers
     protonvpn-gui
