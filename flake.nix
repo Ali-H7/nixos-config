@@ -43,7 +43,8 @@
             ./modules/nvidia.nix
             ./modules/packages.nix
             ./modules/wireguard.nix
-          ];
+          ]
+          ++ (import secrets).docker;
         };
       };
     };

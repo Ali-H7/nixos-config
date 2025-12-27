@@ -16,6 +16,9 @@ in
     papirus-icon-theme
     gnome-boxes # > Virtualization
     ffmpegthumbnailer # Video thumbnails for file managers
+    protonvpn-gui
+    qimgv
+    pywalfox-native # > DMS
   ];
 
   home-manager.users.ali = {
@@ -25,28 +28,18 @@ in
       kitty.enable = true;
       vscode.enable = true;
       git.enable = true;
+      mpv.enable = true;
     };
 
     # --- Music Player ---
     services.mpd.enable = true;
     programs.rmpc.enable = true;
     services.mpd-mpris.enable = true;
-    services.mpdscribble = {
-      enable = true;
-      endpoints = {
-        "last.fm" = {
-          passwordFile = "/home/ali/Secrets/last-fm.txt";
-          username = secret.lastFmUserName;
-        };
-      };
-    };
+    services.mpdscribble.enable = true;
 
     # --- Hyprland Ecosystem ---
     wayland.windowManager.hyprland.enable = true;
     programs.hyprshot.enable = true;
-
-    #MPV
-    programs.mpv.enable = true;
 
     # wayland.windowManager.sway.enable = true;
   };
@@ -54,4 +47,5 @@ in
   # --- Virtualization ---
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+  virtualisation.docker.enable = true;
 }
