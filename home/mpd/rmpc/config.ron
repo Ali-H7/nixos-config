@@ -167,7 +167,7 @@
                         pane: Split(
                             direction: Vertical,
                             panes: [
-                                (size: "80%", pane: Pane(Queue)),
+                                (size: "80%", borders:"BOTTOM", pane: Pane(Queue)),
                                 (size: "20%", pane: Pane(Cava)),
                             ],
                         ),

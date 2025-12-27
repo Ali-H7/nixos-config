@@ -18,6 +18,14 @@ in
       }
     '';
   };
+
+  services.mpdscribble.endpoints = {
+    "last.fm" = {
+      passwordFile = "/home/ali/Secrets/last-fm.txt";
+      username = secret.lastFmUserName;
+    };
+  };
+
   home.file.".config/rmpc/config.ron".source = ./rmpc/config.ron;
   home.file.".config/rmpc/themes/custom.ron".source = ./rmpc/theme.ron;
 }
