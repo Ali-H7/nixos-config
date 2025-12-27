@@ -169,6 +169,12 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
+      windowrulev2 = [
+        "float, class:^(org.quickshell)$"
+        "noborder, class:^(org.quickshell)$"
+        "dimaround, class:^(org.quickshell)$"
+      ];
+
       # Startup
       exec-once = [
         "wl-paste --watch cliphist store"
