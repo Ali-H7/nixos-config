@@ -19,6 +19,7 @@ in
     protonvpn-gui
     qimgv
     pywalfox-native # > DMS
+    nur.repos.nltch.spotify-adblock
   ];
 
   home-manager.users.ali = {
