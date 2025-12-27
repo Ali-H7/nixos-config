@@ -11,6 +11,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     secrets = {
       url = "path:/home/ali/Secrets/secret.nix";
       flake = false;
@@ -22,6 +27,7 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
+      nur,
       secrets,
       ...
     }:
@@ -43,6 +49,11 @@
             ./modules/nvidia.nix
             ./modules/packages.nix
             ./modules/wireguard.nix
+            {
+              nixpkgs.overlays = [
+                inputs.nur.overlays.default # This adds all NUR repos as pkgs.nur.repos.<author>.<package>
+              ];
+            }
           ]
           ++ (import secrets).docker;
         };
