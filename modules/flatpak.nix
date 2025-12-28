@@ -7,6 +7,7 @@
     packages = [
       "org.jdownloader.JDownloader"
       "com.bitwarden.desktop"
+      "com.github.tchx84.Flatseal"
     ];
 
     update.onActivation = true;
