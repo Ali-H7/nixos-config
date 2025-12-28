@@ -13,5 +13,12 @@
     update.onActivation = true;
     # Optional: Uninstall flatpaks not listed in this config
     uninstallUnmanaged = true;
+
+  };
+
+  system.activationScripts.jdownloader-java-fix = {
+    text = ''
+      ${pkgs.flatpak}/bin/flatpak override org.jdownloader.JDownloader --env=_JAVA_AWT_WM_NONREPARENTING=1
+    '';
   };
 }
