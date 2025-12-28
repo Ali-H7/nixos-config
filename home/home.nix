@@ -15,9 +15,9 @@
     ./firefox
     ./git
     ./gtk
-    ./hyprcursor
     ./hyprland
     ./kitty
+    ./mouse-cursor
     ./mpd
     ./qt
     ./vscode
