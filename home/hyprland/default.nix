@@ -23,8 +23,8 @@
         # -*- Config for home/hyprcursor -*-
         #"HYPRCURSOR_SIZE,24"
         #"HYPRCURSOR_THEME,macOS"
-        "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,Simp1e-Catppuccin-Frappe"
+        #"XCURSOR_SIZE,24"
+        #"XCURSOR_THEME,Simp1e-Catppuccin-Frappe"
         # -*-
         "QT_QPA_PLATFORM,wayland"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
@@ -178,6 +178,7 @@
       # Startup
       exec-once = [
         "wl-paste --watch cliphist store"
+        "sleep 1 && dms ipc call lock lock"
       ];
     };
   };

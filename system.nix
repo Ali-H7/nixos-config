@@ -102,6 +102,18 @@
     options = "--delete-older-than 7d";
   };
   nix.settings.auto-optimise-store = true;
+
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "hyprland";
+        user = "ali";
+      };
+      default_session = initial_session;
+    };
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
