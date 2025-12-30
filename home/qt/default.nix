@@ -2,6 +2,11 @@
 { config, ... }:
 
 {
+  home.packages = with pkgs; [
+    ibsForQt5.qt5ct
+    kdePackages.qt6ct
+  ];
+
   qt = {
     enable = true;
     platformTheme.name = "qt6ct"; # This sets the environment variable for both
