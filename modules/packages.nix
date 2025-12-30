@@ -18,6 +18,10 @@ in
     ffmpegthumbnailer # Video thumbnails for file managers
     protonvpn-gui
     qimgv
+    picard
+    puddletag
+    freac
+    fooyin
     pywalfox-native # > DMS
     nur.repos.nltch.spotify-adblock
   ];
