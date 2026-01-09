@@ -107,7 +107,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "hyprland";
+        command = "start-hyprland";
         user = "ali";
       };
       default_session = initial_session;
