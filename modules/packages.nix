@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 let
   secret = import inputs.secrets;
 in
@@ -22,6 +27,7 @@ in
     puddletag
     freac
     fooyin
+    ffmpeg-full
     pywalfox-native # > DMS
     nur.repos.nltch.spotify-adblock
   ];
