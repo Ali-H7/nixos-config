@@ -11,6 +11,7 @@ in
   programs = {
     dms-shell.enable = true; # /modules/nix
     hyprland.enable = true; # /home/hyprland
+    steam.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
