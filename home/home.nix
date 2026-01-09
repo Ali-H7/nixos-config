@@ -19,6 +19,7 @@
     ./kitty
     ./mouse-cursor
     ./mpd
+    ./mpv
     ./qt
     ./vscode
     ./xdg
