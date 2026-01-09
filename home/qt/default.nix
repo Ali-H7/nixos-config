@@ -1,9 +1,9 @@
 # -*- Config for modules/dms -*-
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   home.packages = with pkgs; [
-    ibsForQt5.qt5ct
+    libsForQt5.qt5ct
     kdePackages.qt6ct
   ];
 
@@ -22,8 +22,8 @@
       };
 
       Fonts = {
-        fixed = "Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-        general = "Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+        fixed = "Inter,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+        general = "Inter,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       };
 
       Interface = {
@@ -58,8 +58,8 @@
       };
 
       Fonts = {
-        fixed = "Noto Sans,12,-1,5,50,0,0,0,0,0";
-        general = "Noto Sans,12,-1,5,50,0,0,0,0,0";
+        fixed = "Inter,12,-1,5,50,0,0,0,0,0";
+        general = "Inter,12,-1,5,50,0,0,0,0,0";
       };
 
       Interface = {
