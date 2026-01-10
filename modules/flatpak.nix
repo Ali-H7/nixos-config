@@ -21,4 +21,10 @@
       ${pkgs.flatpak}/bin/flatpak override org.jdownloader.JDownloader --env=_JAVA_AWT_WM_NONREPARENTING=1
     '';
   };
+
+  system.activationScripts.bitwarden-wayland-fix = {
+    text = ''
+      ${pkgs.flatpak}/bin/flatpak override com.bitwarden.desktop --env=ELECTRON_OZONE_PLATFORM_HINT=wayland
+    '';
+  };
 }

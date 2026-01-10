@@ -28,6 +28,7 @@
         # -*-
         "QT_QPA_PLATFORM,wayland"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
+        "NIXOS_OZONE_WL,1"
       ];
 
       # --- Monitors ---
@@ -93,7 +94,7 @@
         "$mainMod, W, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod, E, exec, $fileManager"
-        "$mainMod, P, pseudo,"
+        #"$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
         "$mainMod, F, fullscreen,"
 
@@ -112,6 +113,9 @@
 
         # Security
         "$mainMod ALT, L, exec, dms ipc call lock lock"
+
+        #Second Monitor
+        "$mainMod, P, exec, hyprctl dispatch dpms toggle HDMI-A-2"
 
         # Navigation
         "$mainMod, left, movefocus, l"
