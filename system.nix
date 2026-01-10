@@ -68,6 +68,7 @@
 
   #PipeWire
   # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
+  boot.kernelParams = [ "preempt=full" ];
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true; # if not already enabled
