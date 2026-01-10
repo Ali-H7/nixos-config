@@ -29,6 +29,7 @@ in
     freac
     fooyin
     ffmpeg-full
+    qbittorrent
     pywalfox-native # > DMS
     nur.repos.nltch.spotify-adblock
   ];
