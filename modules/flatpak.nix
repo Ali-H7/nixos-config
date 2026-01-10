@@ -8,6 +8,7 @@
       "org.jdownloader.JDownloader"
       "com.bitwarden.desktop"
       "com.github.tchx84.Flatseal"
+      "com.heroicgameslauncher.hgl"
     ];
 
     update.onActivation = true;

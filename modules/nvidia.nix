@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   hardware.graphics = {
@@ -6,7 +11,7 @@
     enable32Bit = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
 
@@ -14,7 +19,7 @@
 
     powerManagement = {
       enable = true;
-      finegrained = false; 
+      finegrained = false;
     };
 
     open = false;
