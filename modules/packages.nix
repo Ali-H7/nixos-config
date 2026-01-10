@@ -12,6 +12,8 @@ in
     dms-shell.enable = true; # /modules/nix
     hyprland.enable = true; # /home/hyprland
     steam.enable = true;
+    gamescope.enable = true;
+    gamemode.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -31,6 +33,9 @@ in
     ffmpeg-full
     qbittorrent
     pywalfox-native # > DMS
+    heroic
+    lsfg-vk
+    lsfg-vk-ui
     nur.repos.nltch.spotify-adblock
   ];
 
