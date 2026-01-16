@@ -51,9 +51,6 @@ in
 
     # --- Music Player ---
     services.mpd.enable = true;
-    programs.rmpc.enable = true;
-    services.mpd-mpris.enable = true;
-    services.mpdscribble.enable = true;
 
     # --- Hyprland Ecosystem ---
     wayland.windowManager.hyprland.enable = true;
