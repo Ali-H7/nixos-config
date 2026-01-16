@@ -16,6 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
     secrets = {
       url = "path:/home/ali/Secrets/secret.nix";
       flake = false;
@@ -28,6 +30,7 @@
       home-manager,
       nix-flatpak,
       nur,
+      vscode-extensions,
       secrets,
       ...
     }:

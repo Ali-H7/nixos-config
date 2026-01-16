@@ -73,6 +73,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1766025857,
+        "narHash": "sha256-Lav5jJazCW4mdg1iHcROpuXqmM94BWJvabLFWaJVJp0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "def3da69945bbe338c373fddad5a1bb49cf199ce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "def3da69945bbe338c373fddad5a1bb49cf199ce",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -100,7 +116,8 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
-        "secrets": "secrets"
+        "secrets": "secrets",
+        "vscode-extensions": "vscode-extensions"
       }
     },
     "secrets": {
@@ -114,6 +131,24 @@
       "original": {
         "path": "/home/ali/Secrets/secret.nix",
         "type": "path"
+      }
+    },
+    "vscode-extensions": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1768529686,
+        "narHash": "sha256-CRTi1Sr9q2lx5sKisO7/+sPQtwULTy12BG2gYMJBLPc=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "4b49917cd4d3b31eb4e01ef3ae453f4ff9664fb3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "type": "github"
       }
     }
   },
