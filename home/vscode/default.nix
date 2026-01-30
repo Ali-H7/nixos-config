@@ -12,7 +12,7 @@ in
 {
   config = lib.mkIf isEnabled {
     home.packages = with pkgs; [
-      nixfmt-rfc-style
+      nixfmt
     ];
 
     programs.vscode = {

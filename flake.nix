@@ -9,6 +9,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     nur = {
@@ -28,6 +34,7 @@
     inputs@{
       nixpkgs,
       home-manager,
+      plasma-manager,
       nix-flatpak,
       nur,
       vscode-extensions,
@@ -44,13 +51,13 @@
           modules = [
             ./hardware.nix
             ./system.nix
-            ./modules/dms.nix
             ./modules/flatpak.nix
             ./modules/fonts.nix
             ./modules/home-manager.nix
             ./modules/mounts.nix
             ./modules/nvidia.nix
             ./modules/packages.nix
+            ./modules/plasma.nix
             ./modules/wireguard.nix
             {
               nixpkgs.overlays = [

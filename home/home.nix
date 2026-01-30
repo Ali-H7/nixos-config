@@ -14,16 +14,10 @@
   imports = [
     ./firefox
     ./git
-    ./gtk
-    ./hyprland
-    ./kitty
-    ./mouse-cursor
-    ./mpd
     ./mpv
-    ./qt
+    ./plasma
     ./vscode
     ./xdg
-    #./sway
   ];
 
   # link the configuration file in current directory to the specified location in home directory

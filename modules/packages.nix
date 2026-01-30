@@ -8,9 +8,9 @@ let
   secret = import inputs.secrets;
 in
 {
+  services.desktopManager.plasma6.enable = true;
+
   programs = {
-    dms-shell.enable = true; # /modules/nix
-    hyprland.enable = true; # /home/hyprland
     steam.enable = true;
     gamescope.enable = true;
     gamemode.enable = true;
@@ -18,21 +18,17 @@ in
 
   environment.systemPackages = with pkgs; [
     discord
-    nautilus
     neovim
     osu-lazer-bin
-    papirus-icon-theme
+    telegram-desktop
     gnome-boxes # > Virtualization
-    ffmpegthumbnailer # Video thumbnails for file managers
     protonvpn-gui
-    qimgv
     picard
     puddletag
     freac
     fooyin
     ffmpeg-full
     qbittorrent
-    pywalfox-native # > DMS
     heroic
     lsfg-vk
     lsfg-vk-ui
@@ -42,21 +38,10 @@ in
   home-manager.users.ali = {
     programs = {
       firefox.enable = true;
-      librewolf.enable = true;
-      kitty.enable = true;
       vscode.enable = true;
       git.enable = true;
       mpv.enable = true;
     };
-
-    # --- Music Player ---
-    services.mpd.enable = true;
-
-    # --- Hyprland Ecosystem ---
-    wayland.windowManager.hyprland.enable = true;
-    programs.hyprshot.enable = true;
-
-    # wayland.windowManager.sway.enable = true;
   };
 
   # --- Virtualization ---

@@ -11,7 +11,7 @@
     packages = [
       "org.jdownloader.JDownloader"
       "com.bitwarden.desktop"
-      "com.github.tchx84.Flatseal"
+      "io.gitlab.librewolf-community"
     ];
 
     overrides = {
