@@ -57,6 +57,7 @@
             ./modules/mounts.nix
             ./modules/nvidia.nix
             ./modules/packages.nix
+            ./modules/pipewire.nix
             ./modules/plasma.nix
             ./modules/wireguard.nix
             {
