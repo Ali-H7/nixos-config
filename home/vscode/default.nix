@@ -11,9 +11,12 @@ let
 in
 {
   config = lib.mkIf isEnabled {
-    home.packages = with pkgs; [
-      nixfmt
-    ];
+    home = {
+      sessionVariables.EDITOR = "code --wait";
+      packages = with pkgs; [
+        nixfmt
+      ];
+    };
 
     programs.vscode = {
       profiles.default = {
@@ -23,8 +26,7 @@ in
           a5huynh.vscode-ron # (RON) syntax
           monokai.theme-monokai-pro-vscode # Monokai Pro
         ];
-        
-     };
+      };
     };
   };
 }

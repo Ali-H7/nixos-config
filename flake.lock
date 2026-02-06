@@ -140,21 +140,7 @@
         "nixpkgs": "nixpkgs",
         "nur": "nur",
         "plasma-manager": "plasma-manager",
-        "secrets": "secrets",
         "vscode-extensions": "vscode-extensions"
-      }
-    },
-    "secrets": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1767258408,
-        "narHash": "sha256-jFBfJk6xUWplyaliQjXJcf3ukmqjQPL/p9Rl7smaaAQ=",
-        "path": "/home/ali/Secrets/secret.nix",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/ali/Secrets/secret.nix",
-        "type": "path"
       }
     },
     "vscode-extensions": {

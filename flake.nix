@@ -24,10 +24,6 @@
 
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    secrets = {
-      url = "path:/home/ali/Secrets/secret.nix";
-      flake = false;
-    };
   };
 
   outputs =
@@ -38,7 +34,6 @@
       nix-flatpak,
       nur,
       vscode-extensions,
-      secrets,
       ...
     }:
     {
@@ -49,24 +44,9 @@
             inherit inputs;
           };
           modules = [
-            ./hardware.nix
-            ./system.nix
-            ./modules/flatpak.nix
-            ./modules/fonts.nix
-            ./modules/home-manager.nix
-            ./modules/mounts.nix
-            ./modules/nvidia.nix
-            ./modules/packages.nix
-            ./modules/pipewire.nix
-            ./modules/plasma.nix
-            ./modules/wireguard.nix
-            {
-              nixpkgs.overlays = [
-                inputs.nur.overlays.default # This adds all NUR repos as pkgs.nur.repos.<author>.<package>
-              ];
-            }
-          ]
-          ++ (import secrets).docker;
+            ./hosts/blankspace
+            ./modules
+          ];
         };
       };
     };

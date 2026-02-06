@@ -4,11 +4,11 @@
   lib,
   ...
 }:
-let
-  secret = import inputs.secrets;
-in
 {
-  services.desktopManager.plasma6.enable = true;
+  services = {
+    desktopManager.plasma6.enable = true;
+    pipewire.enable = true;
+  };
 
   programs = {
     steam.enable = true;
